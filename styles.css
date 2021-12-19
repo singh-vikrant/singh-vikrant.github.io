@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+body {
+    transition: 0.3s;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(241, 237, 237);
+    color: rgb(59, 59, 59);
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 300;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.switch {
+    width: 40px;
+    height: 20px;
+    background-color: rgb(212, 211, 211);
+    border-radius: 10px;
+    position: relative;
+    scale: 50;
+}
+.flickerDark {
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background-color: rgb(252, 252, 252);
+    position: absolute;
+    transition: 0.3x;
+    top: 2.5px;
+    left: 2.5px;
+    background-color: rgb(59, 59, 59);
+    box-shadow: inset 4px 4px 4px rgb(35, 35, 35),
+                    inset -2px -2px 2px rgba(128, 128, 128, 0.9);
+}
+
+.flickerLight {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(59, 59, 59);
+    position: absolute;
+    top: 5px;
+    left: 45px;
+    box-shadow: 4px 4px 0 0 rgb(252, 252, 252)
+}
+.dark {
+    background-color: rgb(59, 59, 59);
+    transition: 0.3s;
+    color:rgb(241, 237, 237);
+}
+
+.dark .switch {
+    background-color: rgb(80, 79, 79);
+}
+.dark .flickerDark {
+transform: translateX(20px);
+box-shadow: inset 4px 4px 4px rgb(252, 252, 252),
+            inset -4px -4px 4px rgb(96 180 248 / 90%);
+}
+.dark .flickerLight {
+    background-color: rgb(252, 252, 252);
+}
+.main {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.main-text {
+    padding: 30px;
+    margin-bottom: 100px;
+
+}
+
+.square {
+    width: 98%;
+    margin: 1%;
+    height: 350px;
+    background-color: white;
+    text-align: center;
+}
+
+.sub-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dark .square {
+    background-color: rgb(82, 81, 81);;
+}
+
+a {
+    color: rgb(0, 64, 83);
+    font-size: 20px;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.dark a {
+    color: hotpink;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 50px 30px;
+    background-color: rgb(230, 230, 230);
+}
+
+.mailform {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: left;
+}
+.inputItem {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 0
+}
+.inputGrp {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    flex-direction: column;
+}
+textarea {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100px;
+}
+#sendBtn {
+    height: 2rem;
+    width: fit-content;
+    background-color: rgb(11, 145, 185);
+    border-radius: 10px;
+    border: 0px;
+    padding: 5px 20px;
+    margin: 10px;
+    color: white;
+}
+.dark input{
+    color: rgb(241, 237, 237);
+    background-color: rgb(59, 59, 59);
+} 
+
+.dark textarea {
+    color: rgb(241, 237, 237);
+    background-color: rgb(59, 59, 59);
+}
+.dark #sendBtn {
+    color: rgb(241, 237, 237);
+    background-color: rgb(83, 83, 83);
+}
+.dark footer {
+    background-color: rgb(66, 66, 66);
+}
+
+.intro-image {
+    position: relative;
+    width: 50%;
+    height: 350px;
+    display: block;
+    margin-bottom: 100px;
+    justify-content: center;
+}
+
+.cube {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    transform: rotate(-25deg) skew(25deg);
+}
+
+.cube::before {
+    position: absolute;
+    content: '';
+    width: 21px;
+    height: 100%;
+    transform: skewY(-45deg);
+    left: -20px;
+    bottom: -10px;
+}
+
+.cube::after {
+    position: absolute;
+    content: '';
+    height: 21px;
+    width: 100%;
+    transform: skewX(-45deg);
+    left: -10px;
+    bottom: -20px;
+}
+
+#html{
+    left: 230px;
+    bottom: 260px;
+    background-image: url(images/html-square.png);
+    background-size: cover;
+    background-color: rgb(175, 119, 221);
+    box-shadow: -120px 120px 20px rgb(50 50 50/ 15%);
+    }
+#html::before {
+    background-color: rgb(157, 98, 206);
+}
+#html::after {
+    background-color: rgb(130, 67, 182);
+}
+#css{
+    left: 100px;
+    bottom: 130px;
+    background-image: url(images/angular.png);
+    background-size: cover;
+    background-color: rgb(218, 119, 221);
+    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
+    }
+#css::before {
+    background-color: rgb(200, 98, 204);
+}
+#css::after {
+    background-color: rgb(171, 64, 175);
+}
+
+#react{
+    left: 270px;
+    bottom: 0px;
+    background-image: url(images/react-square.png);
+    background-size: cover;
+    background-color: rgb(82, 195, 240);
+    box-shadow: -80px 80px 20px rgb(50 50 50/ 15%);
+    }
+#react::before {
+    background-color: rgb(60, 174, 219);
+}
+#react::after {
+    background-color: rgb(25, 144, 190);
+}
+#javascript{
+    left: 400px;
+    bottom: 130px;
+    background-image: url(images/javascript-square.png);
+    background-size: cover;
+    background-color: rgb(89, 228, 163);
+    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
+    }
+#javascript::before {
+    background-color: rgb(25, 209, 132);
+}
+#javascript::after {
+    background-color: rgb(3, 175, 104);
+}
+
+@media only screen and (min-width: 900px) {
+
+    .main-text{
+        width: 50%;
+    }
+    .square {
+        width: 48%;
+        margin: 1%;
+        height: 600px;
+    }
+    footer {
+        justify-content: left;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .intro-image {
+        display: none;
+    }
+    
+}
+/* 
+.dark #html {
+    box-shadow: -120px 120px 30px rgb(255 255 255/ 15%);
+}
+
+.dark #javascript {
+    box-shadow: -100px 100px 30px rgb(255 255 255/ 15%);
+}
+
+.dark #css {
+    box-shadow: -100px 100px 30px rgb(255 255 255/ 15%);
+}
+
+.dark #react {
+    box-shadow: -80px 80px 30px rgb(255 255 255/ 15%);
+} */
